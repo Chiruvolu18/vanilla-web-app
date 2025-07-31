@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VanillaJS Web App</title>
+</head>
+<body>
+  <script>
+    // Create a centered container
+    const container = document.createElement("div");
+    container.style.textAlign = "center";
+    container.style.marginTop = "100px";
+    document.body.appendChild(container);
+
+    // Heading
+    const heading = document.createElement("h1");
+    heading.innerText = "VanillaJS Web App";
+    container.appendChild(heading);
+
+    // Paragraph
+    const para = document.createElement("p");
+    para.innerText = "Click the button to reveal an image!";
+    container.appendChild(para);
+
+    // Button
+    const button = document.createElement("button");
+    button.innerText = "Click Me!";
+    button.style.padding = "10px 20px";
+    button.style.fontSize = "16px";
+    container.appendChild(button);
+
+    // Image
+    const img = document.createElement("img");
+    img.src = "image.png"; // image must be in same folder as index.html
+    img.alt = "Nginx Image";
+    img.style.display = "none";      // hide at first
+    img.style.marginTop = "20px";
+    img.style.maxWidth = "300px";
+    img.style.marginLeft = "auto";   // center it
+    img.style.marginRight = "auto";  // center it
+    container.appendChild(img);
+
+    // On click show image
+    button.onclick = () => {
+     window.open("image.html", "_blank");  // opens in a new tab
+    // or use "_self" to open in same tab
+    };
+
+    // Page font
+    document.body.style.fontFamily = "Arial, sans-serif";
+  </script>
+</body>
+</html>
